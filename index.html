@@ -18,22 +18,22 @@
         <p><strong>Recebedor:</strong> KATAMA</p>
         <p><strong>Cidade:</strong> VILHENA</p>
         <p><strong>Valor:</strong> R$ 15.50</p>
-        <p><strong>TxID:</strong> 4234ba77e85944cfb6750097c</p>
+        <p><strong>TxID:</strong> 16ffcae780124748ac9def646</p>
         <p><strong>Pix Copia e Cola:</strong></p>
-        <div class='copia' id='copiaTexto'>00020101021226900014br.gov.bcb.pix2568pix.sicoob.com.br/qr/payload/v2/8bfc784c-7799-44ed-a5b5-44234ef17d975204000053039865802BR5913Nao_informado6013Nao_informado62070503***63046CC8</div>
+        <div class='copia' id='copiaTexto'>00020101021226900014br.gov.bcb.pix2568pix.sicoob.com.br/qr/payload/v2/4d934ad5-28cf-4619-8b63-20c88ca8ff415204000053039865802BR5913Nao_informado6013Nao_informado62070503***6304AC37</div>
         <button onclick='copiarTexto()'>📋 Copiar Pix</button>
         <h3>QR Code</h3>
-        <img src='https://chart.googleapis.com/chart?chs=260x260&cht=qr&chl=00020101021226900014br.gov.bcb.pix2568pix.sicoob.com.br%2Fqr%2Fpayload%2Fv2%2F8bfc784c-7799-44ed-a5b5-44234ef17d975204000053039865802BR5913Nao_informado6013Nao_informado62070503%2A%2A%2A63046CC8' width='260' height='260' />
+        <img src='https://chart.googleapis.com/chart?chs=260x260&cht=qr&chl=00020101021226900014br.gov.bcb.pix2568pix.sicoob.com.br%2Fqr%2Fpayload%2Fv2%2F4d934ad5-28cf-4619-8b63-20c88ca8ff415204000053039865802BR5913Nao_informado6013Nao_informado62070503%2A%2A%2A6304AC37' width='260' height='260' />
     </div>
     <script>
         function copiarTexto() {
             var texto = document.getElementById('copiaTexto').innerText;
-            navigator.clipboard.writeText(texto).then(function() { alert('Pix copiado!'); });
+            navigator.clipboard.writeText(texto).then(() => alert('Pix copiado!'));
         }
         function copiarTextoAuto() {
             var texto = document.getElementById('copiaTexto').innerText;
-            navigator.clipboard.writeText(texto).then(function() {
-                setTimeout(function() { alert('📋 Pix Copia e Cola já foi copiado!'); }, 300);
+            navigator.clipboard.writeText(texto).then(() => {
+                setTimeout(() => alert('📋 Pix Copia e Cola já foi copiado!'), 300);
             });
         }
     </script>
