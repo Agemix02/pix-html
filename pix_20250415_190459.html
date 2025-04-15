@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>PIX - Detalhes da Cobrança</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8f8f8; padding: 20px; }
+        .container { background: #fff; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto; box-shadow: 0 0 10px #ccc; text-align: center; }
+        .copia { background: #eee; padding: 10px; border-radius: 5px; font-family: monospace; word-break: break-word; margin-bottom: 10px; }
+        button { padding: 10px 20px; background-color: #009688; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #00796B; }
+        img { margin-top: 20px; border: 1px solid #ccc; padding: 5px; background: white; }
+    </style>
+</head>
+<body onload='copiarTextoAuto()'>
+    <div class='container'>
+        <h2>💳 PIX - Detalhes da Cobrança</h2>
+        <p><strong>Recebedor:</strong> KATAMA</p>
+        <p><strong>Cidade:</strong> VILHENA</p>
+        <p><strong>Valor:</strong> R$ 15.50</p>
+        <p><strong>TxID:</strong> 3b17f907f88d4604802832337</p>
+        <p><strong>Pix Copia e Cola:</strong></p>
+        <div class='copia' id='copiaTexto'>00020101021226900014br.gov.bcb.pix2568pix.sicoob.com.br/qr/payload/v2/7a148a1f-5d1e-4f6b-a7ca-7b9a51bcae315204000053039865802BR5913Nao_informado6013Nao_informado62070503***6304E80F</div>
+        <button onclick='copiarTexto()'>📋 Copiar Pix</button>
+        <h3>QR Code</h3>
+        <img src='https://chart.googleapis.com/chart?chs=260x260&cht=qr&chl=00020101021226900014br.gov.bcb.pix2568pix.sicoob.com.br%2Fqr%2Fpayload%2Fv2%2F7a148a1f-5d1e-4f6b-a7ca-7b9a51bcae315204000053039865802BR5913Nao_informado6013Nao_informado62070503%2A%2A%2A6304E80F' width='260' height='260' />
+    </div>
+    <script>
+        function copiarTexto() {
+            var texto = document.getElementById('copiaTexto').innerText;
+            navigator.clipboard.writeText(texto).then(function() { alert('Pix copiado!'); });
+        }
+        function copiarTextoAuto() {
+            var texto = document.getElementById('copiaTexto').innerText;
+            navigator.clipboard.writeText(texto).then(function() {
+                setTimeout(function() { alert('📋 Pix Copia e Cola já foi copiado!'); }, 300);
+            });
+        }
+    </script>
+</body>
+</html>
